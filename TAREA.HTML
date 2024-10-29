@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página</title>
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hover-effect:hover {
+            background-color: #e3e3e3;
+            color: #333;
+        }
+        
+        .fixed-element {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffefa0;
+            padding: 10px 15px;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Planes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="alert alert-info text-center mt-3" role="alert">
+        Bienvenido a nuestra página de Bootstrap
+    </div>
+
+    <div class="container mt-5 text-center">
+        <h2 class="mb-4">Aprende Bootstrap</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5GcQtLDGXy8" title="Introducción a Bootstrap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="p-4 bg-light border rounded shadow hover-effect">
+                    <h3>¿Qué es Bootstrap?</h3>
+                    <p>Bootstrap es un framework de código abierto para desarrollar interfaces web responsivas y móviles. Desarrollado por Twitter, permite crear sitios y aplicaciones web de forma rápida gracias a sus componentes y plantillas.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-4 bg-light border rounded shadow hover-effect">
+                    <h3>Ventajas de Bootstrap</h3>
+                    <p>Bootstrap ahorra tiempo, ofrece componentes preconstruidos, una gran comunidad de soporte, y es compatible con los navegadores modernos para asegurar una experiencia consistente en distintas plataformas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/564x/c1/78/5d/c1785d50a929254419fa4aad0560b058.jpg" class="d-block w-100" alt="Diseño Responsivo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Diseño Responsivo</h5>
+                    <p>Bootstrap adapta los sitios web a diferentes tamaños de pantalla, ideal en la era de los dispositivos móviles.</p> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/d7/c3/a7/d7c3a7c98a39f81ad00b8ccfb7dfae8c.jpg" class="d-block w-100" alt="Componentes Preconstruidos">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Componentes Preconstruidos</h5>
+                    <p>Bootstrap ofrece botones, formularios, navegación, y más, personalizables y listos para usar.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/7f/3e/df/7f3edfbaf47276629868f6aad2031b57.jpg" class="d-block w-100" alt="Compatibilidad con Navegadores">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Compatibilidad con Navegadores</h5>
+                    <p>Bootstrap asegura que los sitios se visualicen correctamente en los navegadores más utilizados.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <div class="fixed-element">
+        Información
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
